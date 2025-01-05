@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的Vue项目</title>
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/3.2.26/vue.global.min.js"></script>  
+<link rel="stylesheet" href="/back.css">
+<style>
+  /* 定义按钮的基本样式 */
+  .button-style {
+    padding: 70px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute; /* 使用绝对定位 */
+    width: auto;
+  }
+</style>
+</head>
+<body>
+
+ <div class="back">
+  <div id="names">
+    <h1 class="h1left">{{ title }}</h1>
+    <p class="pshow">{{ play }}</p>
+   </div>
+   <script>
+    const { createApp } = Vue;  
+    const names = {
+      data() {  
+        return {
+          title: '初学者的Vue站点',  
+          play: '你可以从这里得到便利'  
+        };
+      }
+    }
+    createApp(names).mount('#names');
+   </script>
+ </div>
+
+ <div id="nav">
+  <button class="button-style" :style="{ top: navTop + 'px', left: navLeft + 'px' }" @click="navigateToUrl">
+    {{ navText }}
+  </button>
+ </div>
+
+ <script>
+  const nav = {
+    data() {
+      return {
+        navText: '江湖笔者导航：在线工具网站的集合',
+        navTop: 160, // 按钮的垂直位置（像素）
+        navLeft: 8, // 按钮的水平位置（像素）
+        url: 'https://nav.jianghu.cfd'  // 目标 URL
+      };
+    },
+    methods: {
+      navigateToUrl() {
+        window.open(this.url, '_blank'); // 在新标签页中打开 URL
+      }
+    }
+  };
+  createApp(nav).mount('#nav');
+</script>
+
+<div id="blogjh">
+  <button class="button-style" :style="{ top: blogjhTop + 'px', left: blogjhLeft + 'px' }" @click="navigateToUrl">
+    {{ blogjhText }}
+  </button>
+</div>
+
+<script>
+  const blogjh = {
+    data() {
+      return {
+        blogjhText: '江湖笔者博客：把简单带入你的生活',
+        blogjhTop: 325, // 按钮的垂直位置（像素）
+        blogjhLeft: 8, // 按钮的水平位置（像素）
+        url: 'https://go.jianghu.cfd'  // 目标 URL
+      };
+    },
+    methods: {
+      navigateToUrl() {
+        window.open(this.url, '_blank'); // 在新标签页中打开 URL
+      }
+    }
+  };
+  createApp(blogjh).mount('#blogjh');
+</script>
+
+</body>
+</html>

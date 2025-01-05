@@ -1,0 +1,42 @@
+/* back.css */
+.back {
+    background-image: url('/vueteset/bk1.jpg'); /* 设置背景图片路径 */
+    background-size: cover; /* 背景图片覆盖整个元素 */
+    background-position: center; /* 背景图片居中显示 */
+    height: 20vh; /* 使用视口高度 */
+    width: 100%; /* 设置宽度为 100% */
+    margin: 0; /* 移除默认的边距 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+
+  }
+  
+  button {
+    /*按钮的样式*/padding: 100px 20px;
+    /*内边距，可以调整按钮的大小*/font-size: 16px;
+    /*字体大小*/border: none;
+    /*移除边框*/border-radius: 20px;
+    /*圆角边框*/background-color: #4CAF50;
+    /*背景颜色*/color: white;
+    /*文字颜色*/cursor: pointer;
+    /*鼠标样式*/transition: background-color 0.3s ease;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin: auto;
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* 添加透明度过渡效果 */
+    opacity: 0.8; /* 设置按钮的初始透明度为 0.8 */
+  }
+  
+.h1left{
+    text-align: center;
+    font-size: 35px;
+    color: blue;
+
+}
+.pshow{
+    text-shadow: #4CAF50;
+    text-align: right;
+    font-size: 25px; 
+}
