@@ -1,6 +1,6 @@
 /* back.css */
 .back {
-    background-image: url('/vueteset/bk1.jpg'); /* 设置背景图片路径 */
+    background-image: url('/bk1.jpg'); /* 设置背景图片路径 */
     background-size: cover; /* 背景图片覆盖整个元素 */
     background-position: center; /* 背景图片居中显示 */
     height: 20vh; /* 使用视口高度 */
